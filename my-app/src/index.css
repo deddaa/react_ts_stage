@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme {
+            --font-assimovian:'Asimovian', 'sans-serif';
+            --font-noto-serif: 'Noto Serif', 'serif';
+}
