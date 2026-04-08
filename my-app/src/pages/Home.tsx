@@ -1,8 +1,44 @@
 import Header from "../components/layout/header";
 import Footer from "../components/layout/footer";
 import Button from "../components/ui/button";
+import CardList from "../components/ui/Card";
+import { useState } from "react";
 
 function Home() {
+  const [projects, setProjects] = useState([
+    {
+      title: "Projet 1",
+      description: "Description du projet 1",
+      imageUrl: "https://picsum.photos/400/200",
+      id: 1,
+    },
+    {
+      title: "Projet 2",
+      description: "Description du projet 2",
+      imageUrl: "https://picsum.photos/400/200",
+      id: 2,
+    },
+    {
+      title: "Projet 3",
+      description: "Description du projet 3",
+      imageUrl: "https://picsum.photos/400/200",
+      id: 3,
+    },
+    {
+      title: "Projet 4",
+      description: "Description du projet 4",
+      imageUrl: "https://picsum.photos/400/200",
+      id: 4,
+    },
+    {
+      title: "Projet 5",
+      description: "Description du projet 5",
+      imageUrl: "https://picsum.photos/400/200",
+      id: 5,
+    },
+  ]);
+
+
   return (
     <>
       <Header />
@@ -25,14 +61,12 @@ function Home() {
         </div>
       </div>
 
-      <div className="bg-gray-100 px-8 py-16 max-w-6xl mx-auto">
+      <div className="bg-gray-100 px-8 py-16 max-w-7xl mx-auto">
         <h3 className="font-noto-serif text-4xl text-gray-800 mb-8">
           Projets en vedette
         </h3>
-        <p className="font-noto-serif text-gray-500">
-          Les projets arrivent bientôt...
-        </p>
-      </div>
+          <CardList projects={projects} />
+        </div>
 
       <Footer companyName="Result" date={2026} />
     </>
