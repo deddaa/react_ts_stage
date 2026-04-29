@@ -38,7 +38,7 @@ function Home() {
     },
   ]);
 
-
+  const year = new Date().getFullYear();
   return (
     <>
       <Header />
@@ -68,7 +68,7 @@ function Home() {
           <CardList projects={projects} />
         </div>
 
-      <Footer companyName="Result" date={2026} />
+      <Footer companyName="Result" date={year} />
     </>
   );
 }
